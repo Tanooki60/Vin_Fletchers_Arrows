@@ -9,7 +9,8 @@ float arrowCost = arrow.GetArrowHead(arrowSelection);
 float fletchingCost = arrow.GetFletching(fletchingSelection);
 float shaftLength = arrow.GetLength(lengthSelection);
 
-var arrowTotalCost = arrow.GetCost(arrowCost, fletchingCost, shaftLength);
+//Produces the total cost
+arrow.GetCost(arrowCost, fletchingCost, shaftLength);
 
 string UserInput(string text)
 {
@@ -32,7 +33,6 @@ class Arrow
     public float GetArrowHead(string input)
     {
         return input switch
-
         {
             "steel" => (float)Arrowhead.Steel,
             "wood" => (float)Arrowhead.Wood,
@@ -43,7 +43,6 @@ class Arrow
     public float GetFletching(string input) 
     {
         return input switch
-
         {
             "plastic" => (float)Fletching.Plastic,
             "turkey" => (float)Fletching.Turkey,
